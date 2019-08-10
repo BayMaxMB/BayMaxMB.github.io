@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="lib/css/bmStyle.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -25,17 +26,259 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-				<section>
-					<section>Slide 3.1</section>
-					<section>
-					Slide 3.2
-<aside class="notes">
-		Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit »S« on your keyboard).Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit »S« on your keyboard).Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit »S« on your keyboard).Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit »S« on your keyboard).Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit »S« on your keyboard).Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit »S« on your keyboard).Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit »S« on your keyboard).
-	</aside>
+				<section data-background-color="#C1BEBC"
+						 data-transition="fade-in fade-out"
+						 data-transition-speed="slow">
+					<img src="./lib/img/logo-mongodb-png-mongodb-logo-anything-but-the-simplest-of-web-applications-requires-a-database-to-store-and-serve-content-from-choosing-the-right-database-and-structuring-413.png"
+						 style="border: none;
+						 		border-color: transparent;
+						 		width: 50%;
+						 		border-radius: 20px;
+						 		background-color: transparent;
+						 		box-shadow: none;">
+					<br>
+					<span style="color: black; font-size: 2rem; float: left;">Begzod</span>
+					<span style="color: black; font-size: 2rem; float: right;">Muxamedov</span>
+				<!-- 	<h1>MongoDB</h1>
+					<p class="fragment grow">grow</p>
+					<p class="fragment shrink">shrink</p>
+					<p class="fragment fade-out">fade-out</p>
+					<p class="fragment fade-up">fade-up (also down, left and right!)</p>
+					<p class="fragment fade-in-then-out">fades in, then out when we move to the next step</p>
+					<p class="fragment fade-in-then-semi-out">fades in, then obfuscate when we move to the next step</p>
+					<p class="fragment highlight-current-blue">blue only once</p>
+					<p class="fragment highlight-red">highlight-red</p>
+					<p class="fragment highlight-green">highlight-green</p>
+					<p class="fragment highlight-blue">highlight-blue</p>
+				 -->	<aside class="notes">
+						Good afternoon, everyone!
+						Now I'm here to talk about world's well know database system which are used in moder applications: MongoDB!
+					</aside>
 				</section>
-					
+				<section data-background-color="#3F3E42">
+					<img src="./lib/img/420228_thumb.png"
+						 style="
+						 		width: 50%;
+						 		border-radius: 20px;
+						 		padding: 30px;
+						 		background-image: linear-gradient(to bottom right, #FFFFFF, #B8B7C5) ">
+					<p style="color: #E8E7D5">
+						is: cross-platform, document oriented and NoSQL database.
+					</p>
+					<p style="color: #C1BEBC">
+						provides: high performance, high availability, and easy scalability.
+					</p>
+					<aside class="notes">
+						it works on concept of collection and document.
+					</aside>
+				</section>
+				<section>
+					<section data-background-color="#3F3E42">
+						<h3 style="color: #FFFFF">
+							Database
+						</h3>
+						<p style="color: #E8E7D5">
+							is a physical container for collections.
+						</p>
+						<p style="color: #C1BEBC">
+							Each database gets its own set of files on the file system.
+						</p>
+						<aside class="notes">
+							A single MongoDB server typically has multiple databases.
+						</aside>
+					</section>
+					<section data-background-color="#3F3E42">
+						<h3 style="color: #FFFFF">
+							Collection
+						</h3>
+						<p style="color: #E8E7D5">
+							is a group of MongoDB documents.
+						</p>
+						<p style="color: #C1BEBC">
+							it is the equivalent of an RDBMS table.
+						</p>
+						<aside class="notes">
+							A collection exists within a single database.
+							Collections do not enforce a schema.
+							Documents within a collection can have different fields.
+							Typically, all documents in a collection are of similar or related purpose.
+						</aside>
+					</section>
+					<section data-background-color="#3F3E42">
+						<h3 style="color: #FFFFF">
+							Document
+						</h3>
+						<p style="color: #E8E7D5">
+							is a set of key-value pairs.
+						</p>
+						<p style="color: #C1BEBC">
+							they have dynamic schema. 
+						</p>
+						<aside class="notes">
+							Dynamic schema - documents in the same collection do not need to have the same set of fields or structure, and common fields in a collection's documents may hold different types of data.
+						</aside>
+					</section>
+					<section data-background-image="./lib/img/image03.png">
+						<aside class="notes">
+							Dynamic schema's representation compared to Relational DB (Tables)
+						</aside>
+					</section>
+				</section>
+				<section data-background-image="./lib/img/mongodb-evenings-dc-mongodb-the-new-default-database-for-giant-ideas-37-638.jpg">
+					<aside class="notes">
+						Comparison between SQL Databases andMongoDB
+						PK - Primary Key (Unique): by default MongoDB provides _id if it is not included
+					</aside>
+				</section>
+				<section data-background-color="#E8E7D5">
+					<section>
+						<h3 style="color: #3F3E42">
+							Advantages
+						</h3>
+					</section>
+					<section>
+						<ul>
+							<li class="">
+								Schema less − MongoDB is a document database in which one collection holds different documents. Number of fields, content and size of the document can differ from one document to another.
+							</li>
+							<li class="fragment fade-up">
+								Structure of a single object is clear.
+							</li>
+							<li class="fragment fade-up">
+								No complex joins.
+							</li>
+							<li class="fragment fade-up">
+								Deep query-ability. MongoDB supports dynamic queries on documents using a document-based query language that's nearly as powerful as SQL.
+							</li>
+							<li class="fragment fade-up">
+								Ease of scale-out
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section data-background-color="#E8E7D5">
+					<section>
+						<h2>
+							Where it is used?
+						</h2>
+					</section>
+					<section data-transition="fade-in"
+							 data-transition-speed="fast">
+						<p>
+							<img class="logo"
+								 src="./lib/img/logo-mongodb-png-mongodb-logo-anything-but-the-simplest-of-web-applications-requires-a-database-to-store-and-serve-content-from-choosing-the-right-database-and-structuring-413.png"
+								 style="border: 1px solid black; background: none;">
+							<img class="logo"
+								 src="./lib/img/express-109.svg"
+								 style="border: 1px solid black; background: none;">
+							<img class="logo"
+								 src="./lib/img/react.svg"
+								 style="border: 1px solid black; background: none;">
+							<img class="logo"
+								 src="./lib/img/nodejs-1.svg"
+								 style="border: 1px solid black; background: none;">
+						</p>
+						<p>
+							<div class="logoLetter" style="color: #49B940;">M</div>
+							<div class="logoLetter" style="color: #000000;">E</div>
+							<div class="logoLetter" style="color: #61DBFB;">R</div>
+							<div class="logoLetter" style="color: #68A063;">N</div>
+						</p>
+						<aside class="notes">
+							Oh hey
+						</aside>
+					</section>
+					<section data-transition="fade-in"
+							 data-transition-speed="fast">
+						<p>
+							<img class="logo"
+								 src="./lib/img/logo-mongodb-png-mongodb-logo-anything-but-the-simplest-of-web-applications-requires-a-database-to-store-and-serve-content-from-choosing-the-right-database-and-structuring-413.png"
+								 style="border: 1px solid black; background: none;">
+							<img class="logo"
+								 src="./lib/img/express-109.svg"
+								 style="border: 1px solid black; background: none;">
+							<img class="logo"
+								 src="./lib/img/AngularJS-Shield.svg"
+								 style="border: 1px solid black; background: none;">
+							<img class="logo"
+								 src="./lib/img/nodejs-1.svg"
+								 style="border: 1px solid black; background: none;">
+						</p>
+						<p>
+							<div class="logoLetter" style="color: #49B940;">M</div>
+							<div class="logoLetter" style="color: #000000;">E</div>
+							<div class="logoLetter" style="color: #B52E31;">A</div>
+							<div class="logoLetter" style="color: #68A063;">N</div>
+						</p>
+						<aside class="notes">
+							Oh hey
+						</aside>
+					</section>
+					<section data-transition="fade-in"
+							 data-transition-speed="fast">
+						<p>
+							<img class="logo"
+								 src="./lib/img/logo-mongodb-png-mongodb-logo-anything-but-the-simplest-of-web-applications-requires-a-database-to-store-and-serve-content-from-choosing-the-right-database-and-structuring-413.png"
+								 style="border: 1px solid black; background: none;">
+							<img class="logo"
+								 src="./lib/img/express-109.svg"
+								 style="border: 1px solid black; background: none;">
+							<img class="logo"
+								 src="./lib/img/vue-9.svg"
+								 style="border: 1px solid black; background: none;">
+							<img class="logo"
+								 src="./lib/img/nodejs-1.svg"
+								 style="border: 1px solid black; background: none;">
+						</p>
+						<p>
+							<div class="logoLetter" style="color: #49B940;">M</div>
+							<div class="logoLetter" style="color: #000000;">E</div>
+							<div class="logoLetter" style="color: #41B883;">V</div>
+							<div class="logoLetter" style="color: #68A063;">N</div>
+						</p>
+						<aside class="notes">
+							Oh hey
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3 style="color: #FFFFF">
+							How to use?
+						</h3>
+						<p style="color: #E8E7D5">
+							<a href="https://docs.mongodb.com/manual/tutorial/atlas-free-tier-setup/#create-free-tier-manual">Create an Atlas Cluster</a>
+						</p>
+						<p style="color: #C1BEBC">
+							<a href="https://docs.mongodb.com/manual/installation/#tutorial-installation">Install MongoDB</a>
+						</p>
+						<p style="color: #E8E7D5">
+							<a href="https://docs.mongodb.com/manual/tutorial/getting-started/#insert-documents">Insert Documents</a>
+						</p>
+						<p style="color: #C1BEBC">
+							<a href="https://university.mongodb.com/courses/M001/about">Next Steps</a>
+						</p>
+						<aside class="notes">
+							Further you should learn every aspects to expertise in this technology. MongoDB has own university which provides tutorials. After completion, if you pass exams (paid) you will be awarded with official certification.
+						</aside>
+					</section>
+				</section>
+				<section>
+					<section data-background-color="#E8E7D5">
+						<h2>
+							Who are using it?
+						</h2>
+					</section>
+					<section data-background-image="./lib/img/customers.png">
+					</section>
+				</section>
+				<section data-background-image="./lib/img/scrnsht.png">
+					<h1 style="color: #3F3E42">
+						Why don't you?!
+					</h1>
+					<aside class="notes">
+						Try to install and use today, MongoDB has free plan to feel the power of product! It gives 512mb of memory which is sufficient to test with some sample data which is also provided.
+					</aside>
 				</section>
 			</div>
 		</div>

@@ -1,0 +1,17 @@
+.logo {
+	padding: 20px 15px 10px 10px;
+	height: 12.5rem;
+	width: 20%;
+	border-radius: 20px;
+}
+.logoLetter {
+	display: inline-block;
+	padding: 10px 10px 10px 10px;
+	height: 12.5rem;
+	width: 20%;
+	border: 1px solid black;
+	border-radius: 15px;
+	margin: 5px;
+	font-size: 4em;
+}
+
