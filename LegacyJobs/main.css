@@ -34,7 +34,7 @@ header {
 }
 
 .container {
-    background: #fa923f;
+    background: white;
     grid-area: container;
 }
 
@@ -118,4 +118,35 @@ h2 {
 .navigation-item a:hover,
 .navigation-item a:active {
     color: #fa923f;
+}
+
+.getstarted {
+    position: relative;
+	top: -260px;
+    color: white;
+    font-size: 55px;
+}
+.iam {
+    position: relative;
+	top: -25px;
+    font-size: 1.5em;
+}
+.buttons {
+    position: relative;
+	top: -90px;
+}
+.persontype {
+    padding: 20px;
+    width: 300px;
+    margin: 10px;
+    font-size: 35px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+}
+.employer {
+    background-color: #0EB0F5;
+}
+.employee {
+    background-color: #F5A80E;
 }
